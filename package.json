@@ -1,7 +1,7 @@
 {
    "name": "react-animation-modal",
    "description": "Customizable react modal with multiple animations.",
-   "version": "0.1.0",
+   "version": "1.0.1",
    "module": "./dist/esm/index.js",
    "main": "./dist/cjs/index.js",
    "types": "./dist/esm/index.d.ts",
@@ -25,13 +25,13 @@
       "@types/react": "^18.0.28",
       "@types/react-dom": "^18.0.11",
       "copyfiles": "^2.4.1",
-      "react-transition-group": "^4.4.5",
       "sass": "^1.58.3",
       "typescript": "^4.9.5"
    },
    "peerDependencies": {
       "react": "^16 || ^17 || ^18",
-      "react-dom": "^16 || ^17 || ^18"
+      "react-dom": "^16 || ^17 || ^18",
+      "react-transition-group": "^4.4.5"
    },
    "scripts": {
       "clean": "rimraf dist",

@@ -69,6 +69,6 @@ export type AnimationType =
    // others
    | 'flash' | 'hinge' | 'jack_in_box' | 'jello' | 'pulse' | 'rubber_band' | 'shake' | 'swing' | 'vibrate' | 'wobble';
 
-export type Size = 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'fullScreen' | `${number}${SizeUnit}`;
+export type Size = 'sm' | 'md' | 'lg' | 'xl' | 'fullScreen' | `${number}${SizeUnit}`;
 
 type SizeUnit = 'px' | '%';

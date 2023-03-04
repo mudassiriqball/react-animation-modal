@@ -57,7 +57,7 @@ export const AnimationModal = ({
    // return
    if (!visible) return null;
    return (
-      <div className="modal">
+      <div className="animated-modal">
          <CSSTransition
             in={showOverlay}
             timeout={500}
@@ -76,11 +76,17 @@ export const AnimationModal = ({
             timeout={450}
             classNames={animation}
          >
-            <div style={{ ...(isSizeValue ? { maxWidth: size } : {}) }} className={`modal-body ${!isSizeValue ? size : ''} ${contentClassName}`}>
+            <div style={{ ...(isSizeValue ? { width: size } : {}) }} className={`modal-body ${!isSizeValue ? size : ''} ${contentClassName}`}>
                <div className={`icon ${closeClassName}`} onClick={() => setShowContent(false)} >
                   {closeIcon || <CloseSvg />}
                </div>
-               {children}
+               {size === 'fullScreen' ?
+                  <div className="fullScreenWrapper">
+                     {children}
+                  </div>
+                  :
+                  children
+               }
             </div>
          </CSSTransition>
       </div>

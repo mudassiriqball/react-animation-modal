@@ -16,7 +16,7 @@ $modal-z-index: 99999999;
 $overlay-z-index: 99999999;
 $body-z-index: 999999999;
 
-.modal {
+.animated-modal {
    position: fixed;
    top: 0px;
    right: 0px;
@@ -27,6 +27,7 @@ $body-z-index: 999999999;
    display: flex;
    justify-content: center;
    align-items: center;
+   background-color: transparent !important;
 
    // Overlay Styles
    .modal-overlay {
@@ -71,7 +72,6 @@ $body-z-index: 999999999;
    .modal-body {
       position: relative;
       display: none;
-      min-height: 300px;
       margin-left: auto;
       margin-right: auto;
       border-radius: 0.5rem;
@@ -79,7 +79,6 @@ $body-z-index: 999999999;
       background-color: $body-bg;
       padding: 16px;
       box-shadow: $body-box-shadow;
-      max-width: calc(100vw - 50px);
       pointer-events: auto;
 
       >div:first-child {
@@ -98,32 +97,65 @@ $body-z-index: 999999999;
    }
 
    .modal-body.sm {
-      max-width: 300px;
+      width: 300px;
    }
 
    .modal-body.md {
-      max-width: 550px;
+      width: 550px;
    }
 
    .modal-body.lg {
-      max-width: 800px;
+      width: 800px;
    }
 
    .modal-body.xl {
-      max-width: 1140px;
+      width: 1140px;
    }
 
    .modal-body.fullScreen {
-      margin: 0px;
+      margin: 0px !important;
       border-radius: 0px;
-      max-width: unset;
-      width: 100vw;
-      height: 100vh;
+      width: 100% !important;
+      height: 100vh !important;
       overflow-y: scroll;
-      padding: 20px;
+      padding: 0px 20px;
+
+      .fullScreenWrapper {
+         padding: 20px 0px;
+      }
 
       >div:first-child {
-         top: 36px;
+         top: 20px;
+         right: 20px;
       }
+
+      >div:first-child:hover {
+         top: 19px;
+         right: 19px;
+      }
+   }
+}
+
+@media screen and (max-width: 1172px) {
+   .modal-body.xl {
+      width: calc(100% - 32px) !important;
+   }
+}
+
+@media screen and (max-width: 832px) {
+
+   .modal-body.lg,
+   .modal-body.xl {
+      width: calc(100% - 32px) !important;
+   }
+}
+
+@media screen and (max-width: 575.98px) {
+
+   .modal-body.sm,
+   .modal-body.md,
+   .modal-body.lg,
+   .modal-body.xl {
+      width: calc(100% - 32px) !important;
    }
 }
