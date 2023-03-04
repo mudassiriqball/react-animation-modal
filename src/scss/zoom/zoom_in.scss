@@ -1,0 +1,85 @@
+.zoom_in {
+   -webkit-animation-name: zoom_in;
+   animation-name: zoom_in;
+}
+
+.zoom_in-enter-done {
+   display: block !important;
+}
+
+.zoom_in-enter-active {
+   display: block !important;
+   -webkit-animation: zoom_in 500ms infinite;
+   animation: zoom_in 500ms infinite;
+}
+
+.zoom_in-exit-active {
+   display: block !important;
+   -webkit-animation: zoom_out 500ms infinite;
+   animation: zoom_out 500ms infinite;
+}
+
+.zoom_in-exit-done {
+   display: none !important;
+}
+
+@-webkit-keyframes zoom_in {
+   from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+   }
+
+   50% {
+      opacity: 1;
+   }
+}
+
+@keyframes zoom_in {
+   from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+   }
+
+   50% {
+      opacity: 1;
+   }
+}
+
+.zoom_out {
+   -webkit-animation-name: zoom_out;
+   animation-name: zoom_out;
+}
+
+@-webkit-keyframes zoom_out {
+   from {
+      opacity: 1;
+   }
+
+   50% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+   }
+
+   to {
+      opacity: 0;
+   }
+}
+
+@keyframes zoom_out {
+   from {
+      opacity: 1;
+   }
+
+   50% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+   }
+
+   to {
+      opacity: 0;
+   }
+}

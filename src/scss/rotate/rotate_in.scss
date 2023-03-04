@@ -1,0 +1,97 @@
+.rotate_in {
+   -webkit-animation-name: rotate_in;
+   animation-name: rotate_in;
+}
+
+.rotate_in-enter-done {
+   display: block !important;
+}
+
+.rotate_in-enter-active {
+   display: block !important;
+   -webkit-animation: rotate_in 500ms infinite;
+   animation: rotate_in 500ms infinite;
+}
+
+.rotate_in-exit-active {
+   display: block !important;
+   -webkit-animation: rotate_out 500ms infinite;
+   animation: rotate_out 500ms infinite;
+}
+
+.rotate_in-exit-done {
+   display: none !important;
+}
+
+@-webkit-keyframes rotate_in {
+   from {
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      -webkit-transform: rotate3d(0, 0, 1, -200deg);
+      transform: rotate3d(0, 0, 1, -200deg);
+      opacity: 0;
+   }
+
+   to {
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+   }
+}
+
+@keyframes rotate_in {
+   from {
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      -webkit-transform: rotate3d(0, 0, 1, -200deg);
+      transform: rotate3d(0, 0, 1, -200deg);
+      opacity: 0;
+   }
+
+   to {
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+   }
+}
+
+.rotate_out {
+   -webkit-animation-name: rotate_out;
+   animation-name: rotate_out;
+}
+
+@-webkit-keyframes rotate_out {
+   from {
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      opacity: 1;
+   }
+
+   to {
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      -webkit-transform: rotate3d(0, 0, 1, 200deg);
+      transform: rotate3d(0, 0, 1, 200deg);
+      opacity: 0;
+   }
+}
+
+@keyframes rotate_out {
+   from {
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      opacity: 1;
+   }
+
+   to {
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      -webkit-transform: rotate3d(0, 0, 1, 200deg);
+      transform: rotate3d(0, 0, 1, 200deg);
+      opacity: 0;
+   }
+}

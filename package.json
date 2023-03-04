@@ -1,0 +1,62 @@
+{
+   "name": "react-animation-modal",
+   "description": "Customizable react modal with multiple animations.",
+   "version": "0.1.0",
+   "module": "./dist/esm/index.js",
+   "main": "./dist/cjs/index.js",
+   "types": "./dist/esm/index.d.ts",
+   "homepage": "https://github.com/mudassiriqball/react-animation-modal#README",
+   "author": {
+      "name": "Mudassir Iqbal"
+   },
+   "files": [
+      "dist/",
+      "lib/",
+      "README.md",
+      "LICENSE"
+   ],
+   "private": false,
+   "babel": {
+      "presets": [
+         "@babel/preset-react"
+      ]
+   },
+   "devDependencies": {
+      "@types/react": "^18.0.28",
+      "@types/react-dom": "^18.0.11",
+      "copyfiles": "^2.4.1",
+      "react-transition-group": "^4.4.5",
+      "sass": "^1.58.3",
+      "typescript": "^4.9.5"
+   },
+   "peerDependencies": {
+      "react": "^16 || ^17 || ^18",
+      "react-dom": "^16 || ^17 || ^18"
+   },
+   "scripts": {
+      "clean": "rimraf dist",
+      "copy-files": "copyfiles -e **/*.ts -e **/*.tsx -u 1 src/scss/* dist/esm/ src/scss/**/* dist/esm/",
+      "copy-files-cjs": "copyfiles -e **/*.ts -e **/*.tsx -u 1 src/scss/* dist/cjs/ src/scss/**/* dist/cjs/",
+      "build": "yarn clean && yarn build:esm && yarn build:cjs && npm run copy-files && npm run copy-files-cjs",
+      "build:esm": "tsc",
+      "build:cjs": "tsc --module commonjs --outDir dist/cjs"
+   },
+   "keywords": [
+      "react",
+      "typescript",
+      "modal",
+      "dialog",
+      "react-modal",
+      "animation-modal",
+      "react-component"
+   ],
+   "bugs": {
+      "url": "https://github.com/mudassiriqball/react-animation-modal/issues",
+      "email": "mudassir.iqball@hotmail.com"
+   },
+   "license": "ISC",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/mudassiriqball/react-animation-modal"
+   }
+}

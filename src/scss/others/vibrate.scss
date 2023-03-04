@@ -1,0 +1,90 @@
+.vibrate {
+   -webkit-animation-name: vibrate;
+   animation-name: vibrate;
+}
+
+.vibrate-enter-done {
+   display: block !important;
+}
+
+.vibrate-enter-active {
+   display: block !important;
+   -webkit-animation: vibrate 500ms infinite;
+   animation: vibrate 500ms infinite;
+}
+
+.vibrate-exit-active {
+   display: block !important;
+   -webkit-animation: vibrate 500ms infinite;
+   animation: vibrate 500ms infinite;
+}
+
+.vibrate-exit-done {
+   display: none !important;
+}
+
+@-webkit-keyframes vibrate {
+   from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+
+   10%,
+   20% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+   }
+
+   30%,
+   50%,
+   70%,
+   90% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+   }
+
+   40%,
+   60%,
+   80% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+   }
+
+   to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+}
+
+@keyframes vibrate {
+   from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+
+   10%,
+   20% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+   }
+
+   30%,
+   50%,
+   70%,
+   90% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+   }
+
+   40%,
+   60%,
+   80% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+   }
+
+   to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+}

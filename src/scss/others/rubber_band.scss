@@ -1,0 +1,98 @@
+.rubber_band {
+   -webkit-animation-name: rubber_band;
+   animation-name: rubber_band;
+}
+
+.rubber_band-enter-done {
+   display: block !important;
+}
+
+.rubber_band-enter-active {
+   display: block !important;
+   -webkit-animation: rubber_band 500ms infinite;
+   animation: rubber_band 500ms infinite;
+}
+
+.rubber_band-exit-active {
+   display: block !important;
+   -webkit-animation: rubber_band 500ms infinite;
+   animation: rubber_band 500ms infinite;
+}
+
+.rubber_band-exit-done {
+   display: none !important;
+}
+
+@-webkit-keyframes rubber_band {
+   from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+
+   30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+   }
+
+   40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+   }
+
+   50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+   }
+
+   65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+   }
+
+   75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+   }
+
+   to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+}
+
+@keyframes rubber_band {
+   from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+
+   30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+   }
+
+   40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+   }
+
+   50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+   }
+
+   65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+   }
+
+   75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+   }
+
+   to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+}

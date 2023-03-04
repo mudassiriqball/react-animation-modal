@@ -1,0 +1,97 @@
+.rotate_in_down_left {
+   -webkit-animation-name: rotate_in_down_left;
+   animation-name: rotate_in_down_left;
+}
+
+.rotate_in_down_left-enter-done {
+   display: block !important;
+}
+
+.rotate_in_down_left-enter-active {
+   display: block !important;
+   -webkit-animation: rotate_in_down_left 500ms infinite;
+   animation: rotate_in_down_left 500ms infinite;
+}
+
+.rotate_in_down_left-exit-active {
+   display: block !important;
+   -webkit-animation: rotate_out_down_left 500ms infinite;
+   animation: rotate_out_down_left 500ms infinite;
+}
+
+.rotate_in_down_left-exit-done {
+   display: none !important;
+}
+
+@-webkit-keyframes rotate_in_down_left {
+   from {
+      -webkit-transform-origin: left bottom;
+      transform-origin: left bottom;
+      -webkit-transform: rotate3d(0, 0, 1, -45deg);
+      transform: rotate3d(0, 0, 1, -45deg);
+      opacity: 0;
+   }
+
+   to {
+      -webkit-transform-origin: left bottom;
+      transform-origin: left bottom;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+   }
+}
+
+@keyframes rotate_in_down_left {
+   from {
+      -webkit-transform-origin: left bottom;
+      transform-origin: left bottom;
+      -webkit-transform: rotate3d(0, 0, 1, -45deg);
+      transform: rotate3d(0, 0, 1, -45deg);
+      opacity: 0;
+   }
+
+   to {
+      -webkit-transform-origin: left bottom;
+      transform-origin: left bottom;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+   }
+}
+
+.rotate_out_down_left {
+   -webkit-animation-name: rotate_out_down_left;
+   animation-name: rotate_out_down_left;
+}
+
+@-webkit-keyframes rotate_out_down_left {
+   from {
+      -webkit-transform-origin: left bottom;
+      transform-origin: left bottom;
+      opacity: 1;
+   }
+
+   to {
+      -webkit-transform-origin: left bottom;
+      transform-origin: left bottom;
+      -webkit-transform: rotate3d(0, 0, 1, 45deg);
+      transform: rotate3d(0, 0, 1, 45deg);
+      opacity: 0;
+   }
+}
+
+@keyframes rotate_out_down_left {
+   from {
+      -webkit-transform-origin: left bottom;
+      transform-origin: left bottom;
+      opacity: 1;
+   }
+
+   to {
+      -webkit-transform-origin: left bottom;
+      transform-origin: left bottom;
+      -webkit-transform: rotate3d(0, 0, 1, 45deg);
+      transform: rotate3d(0, 0, 1, 45deg);
+      opacity: 0;
+   }
+}

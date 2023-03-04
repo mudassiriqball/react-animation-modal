@@ -1,0 +1,81 @@
+.roll {
+   -webkit-animation-name: roll;
+   animation-name: roll;
+}
+
+.roll-enter-done {
+   display: block !important;
+}
+
+.roll-enter-active {
+   display: block !important;
+   -webkit-animation: roll 500ms infinite;
+   animation: roll 500ms infinite;
+}
+
+.roll-exit-active {
+   display: block !important;
+   -webkit-animation: roll_out 500ms infinite;
+   animation: roll_out 500ms infinite;
+}
+
+.roll-exit-done {
+   display: none !important;
+}
+
+@-webkit-keyframes roll {
+   from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -360deg);
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -360deg);
+   }
+
+   to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+   }
+}
+
+@keyframes roll {
+   from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -360deg);
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -360deg);
+   }
+
+   to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+   }
+}
+
+.roll_out {
+   -webkit-animation-name: roll_out;
+   animation-name: roll_out;
+}
+
+@-webkit-keyframes roll_out {
+   from {
+      opacity: 1;
+   }
+
+   to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 360deg);
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 360deg);
+   }
+}
+
+@keyframes roll_out {
+   from {
+      opacity: 1;
+   }
+
+   to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 360deg);
+      transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 360deg);
+   }
+}

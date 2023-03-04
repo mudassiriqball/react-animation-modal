@@ -1,0 +1,129 @@
+@import './bounce/index.scss';
+@import './fade/index.scss';
+@import './flip/index.scss';
+@import './others/index.scss';
+@import './rotate/index.scss';
+@import './slide/index.scss';
+@import './zoom/index.scss';
+@import './wave/index.scss';
+@import './roll/index.scss';
+
+$overlay-bg: rgb(0, 0, 0, 0.5);
+$body-bg: white;
+$body-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+$modal-z-index: 99999999;
+$overlay-z-index: 99999999;
+$body-z-index: 999999999;
+
+.modal {
+   position: fixed;
+   top: 0px;
+   right: 0px;
+   left: 0px;
+   bottom: 0px;
+   z-index: $modal-z-index;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   // Overlay Styles
+   .modal-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: $modal-z-index;
+      background-color: $overlay-bg;
+   }
+
+   .animation-modal-overlay-enter-done {
+      opacity: 0.1;
+   }
+
+   .animation-modal-overlay-enter-active {
+      display: block !important;
+      opacity: 0.9;
+      transition: all 500ms infinite;
+   }
+
+   .animation-modal-overlay-enter-done {
+      opacity: 0.9;
+   }
+
+   .animation-modal-overlay-exit {
+      opacity: 0.9;
+   }
+
+   .animation-modal-overlay-exit-active {
+      display: block !important;
+      opacity: 0.1;
+      transition: all 500ms infinite;
+   }
+
+   .animation-modal-overlay-exit-done {
+      opacity: 0;
+   }
+
+   // Body Styles
+   .modal-body {
+      position: relative;
+      display: none;
+      min-height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 0.5rem;
+      z-index: $body-z-index;
+      background-color: $body-bg;
+      padding: 16px;
+      box-shadow: $body-box-shadow;
+      max-width: calc(100vw - 50px);
+      pointer-events: auto;
+
+      >div:first-child {
+         position: absolute;
+         width: 25px;
+         top: 16px;
+         right: 16px;
+         cursor: pointer;
+      }
+
+      >div:first-child:hover {
+         width: 27px;
+         top: 15px;
+         right: 15px;
+      }
+   }
+
+   .modal-body.sm {
+      max-width: 300px;
+   }
+
+   .modal-body.md {
+      max-width: 550px;
+   }
+
+   .modal-body.lg {
+      max-width: 800px;
+   }
+
+   .modal-body.xl {
+      max-width: 1140px;
+   }
+
+   .modal-body.fullScreen {
+      margin: 0px;
+      border-radius: 0px;
+      max-width: unset;
+      width: 100vw;
+      height: 100vh;
+      overflow-y: scroll;
+      padding: 20px;
+
+      >div:first-child {
+         top: 36px;
+      }
+   }
+}

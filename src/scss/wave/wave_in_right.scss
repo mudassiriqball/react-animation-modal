@@ -1,0 +1,105 @@
+.wave_in_right {
+   -webkit-animation-name: wave_in_right;
+   animation-name: wave_in_right;
+   -webkit-animation-timing-function: ease-out;
+   animation-timing-function: ease-out;
+}
+
+.wave_in_right-enter-done {
+   display: block !important;
+}
+
+.wave_in_right-enter-active {
+   display: block !important;
+   -webkit-animation: wave_in_right 500ms infinite;
+   animation: wave_in_right 500ms infinite;
+}
+
+.wave_in_right-exit-active {
+   display: block !important;
+   -webkit-animation: wave_out_right 500ms infinite;
+   animation: wave_out_right 500ms infinite;
+}
+
+.wave_in_right-exit-done {
+   display: none !important;
+}
+
+@-webkit-keyframes wave_in_right {
+   from {
+      -webkit-transform: translate3d(-100vw, 0, 0) skewX(-30deg);
+      transform: translate3d(-100vw, 0, 0) skewX(-30deg);
+      opacity: 0;
+   }
+
+   60% {
+      -webkit-transform: skewX(20deg);
+      transform: skewX(20deg);
+      opacity: 1;
+   }
+
+   80% {
+      -webkit-transform: skewX(-5deg);
+      transform: skewX(-5deg);
+   }
+
+   to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+   }
+}
+
+@keyframes wave_in_right {
+   from {
+      -webkit-transform: translate3d(-100vw, 0, 0) skewX(-30deg);
+      transform: translate3d(-100vw, 0, 0) skewX(-30deg);
+      opacity: 0;
+   }
+
+   60% {
+      -webkit-transform: skewX(20deg);
+      transform: skewX(20deg);
+      opacity: 1;
+   }
+
+   80% {
+      -webkit-transform: skewX(-5deg);
+      transform: skewX(-5deg);
+   }
+
+   to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+   }
+}
+
+.wave_out_right {
+   -webkit-animation-name: wave_out_right;
+   animation-name: wave_out_right;
+   -webkit-animation-timing-function: ease-in;
+   animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes wave_out_right {
+   from {
+      opacity: 1;
+   }
+
+   to {
+      -webkit-transform: translate3d(-100vw, 0, 0) skewX(30deg);
+      transform: translate3d(-100vw, 0, 0) skewX(30deg);
+      opacity: 0;
+   }
+}
+
+@keyframes wave_out_right {
+   from {
+      opacity: 1;
+   }
+
+   to {
+      -webkit-transform: translate3d(-100vw, 0, 0) skewX(30deg);
+      transform: translate3d(-100vw, 0, 0) skewX(30deg);
+      opacity: 0;
+   }
+}

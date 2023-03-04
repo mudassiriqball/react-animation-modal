@@ -1,0 +1,97 @@
+.rotate_in_up_right {
+   -webkit-animation-name: rotate_in_up_right;
+   animation-name: rotate_in_up_right;
+}
+
+.rotate_in_up_right-enter-done {
+   display: block !important;
+}
+
+.rotate_in_up_right-enter-active {
+   display: block !important;
+   -webkit-animation: rotate_in_up_right 500ms infinite;
+   animation: rotate_in_up_right 500ms infinite;
+}
+
+.rotate_in_up_right-exit-active {
+   display: block !important;
+   -webkit-animation: rotate_out_up_right 500ms infinite;
+   animation: rotate_out_up_right 500ms infinite;
+}
+
+.rotate_in_up_right-exit-done {
+   display: none !important;
+}
+
+@-webkit-keyframes rotate_in_up_right {
+   from {
+      -webkit-transform-origin: right bottom;
+      transform-origin: right bottom;
+      -webkit-transform: rotate3d(0, 0, 1, -90deg);
+      transform: rotate3d(0, 0, 1, -90deg);
+      opacity: 0;
+   }
+
+   to {
+      -webkit-transform-origin: right bottom;
+      transform-origin: right bottom;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+   }
+}
+
+@keyframes rotate_in_up_right {
+   from {
+      -webkit-transform-origin: right bottom;
+      transform-origin: right bottom;
+      -webkit-transform: rotate3d(0, 0, 1, -90deg);
+      transform: rotate3d(0, 0, 1, -90deg);
+      opacity: 0;
+   }
+
+   to {
+      -webkit-transform-origin: right bottom;
+      transform-origin: right bottom;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+   }
+}
+
+.rotate_out_up_right {
+   -webkit-animation-name: rotate_out_up_right;
+   animation-name: rotate_out_up_right;
+}
+
+@-webkit-keyframes rotate_out_up_right {
+   from {
+      -webkit-transform-origin: right bottom;
+      transform-origin: right bottom;
+      opacity: 1;
+   }
+
+   to {
+      -webkit-transform-origin: right bottom;
+      transform-origin: right bottom;
+      -webkit-transform: rotate3d(0, 0, 1, 90deg);
+      transform: rotate3d(0, 0, 1, 90deg);
+      opacity: 0;
+   }
+}
+
+@keyframes rotate_out_up_right {
+   from {
+      -webkit-transform-origin: right bottom;
+      transform-origin: right bottom;
+      opacity: 1;
+   }
+
+   to {
+      -webkit-transform-origin: right bottom;
+      transform-origin: right bottom;
+      -webkit-transform: rotate3d(0, 0, 1, 90deg);
+      transform: rotate3d(0, 0, 1, 90deg);
+      opacity: 0;
+   }
+}

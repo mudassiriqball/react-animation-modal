@@ -1,0 +1,105 @@
+.wave_in_down {
+   -webkit-animation-name: wave_in_down;
+   animation-name: wave_in_down;
+   -webkit-animation-timing-function: ease-out;
+   animation-timing-function: ease-out;
+}
+
+.wave_in_down-enter-done {
+   display: block !important;
+}
+
+.wave_in_down-enter-active {
+   display: block !important;
+   -webkit-animation: wave_in_down 500ms infinite;
+   animation: wave_in_down 500ms infinite;
+}
+
+.wave_in_down-exit-active {
+   display: block !important;
+   -webkit-animation: wave_out_down 500ms infinite;
+   animation: wave_out_down 500ms infinite;
+}
+
+.wave_in_down-exit-done {
+   display: none !important;
+}
+
+@-webkit-keyframes wave_in_down {
+   from {
+      -webkit-transform: translate3d(0, 100vh, 0) skewY(-30deg);
+      transform: translate3d(0, 100vh, 0) skewY(-30deg);
+      opacity: 0;
+   }
+
+   60% {
+      -webkit-transform: skewY(20deg);
+      transform: skewY(20deg);
+      opacity: 1;
+   }
+
+   80% {
+      -webkit-transform: skewY(-5deg);
+      transform: skewY(-5deg);
+   }
+
+   to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+   }
+}
+
+@keyframes wave_in_down {
+   from {
+      -webkit-transform: translate3d(0, 100vh, 0) skewY(-30deg);
+      transform: translate3d(0, 100vh, 0) skewY(-30deg);
+      opacity: 0;
+   }
+
+   60% {
+      -webkit-transform: skewY(20deg);
+      transform: skewY(20deg);
+      opacity: 1;
+   }
+
+   80% {
+      -webkit-transform: skewY(-5deg);
+      transform: skewY(-5deg);
+   }
+
+   to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+   }
+}
+
+.wave_out_down {
+   -webkit-animation-name: wave_out_down;
+   animation-name: wave_out_down;
+   -webkit-animation-timing-function: ease-in;
+   animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes wave_out_down {
+   from {
+      opacity: 1;
+   }
+
+   to {
+      -webkit-transform: translate3d(0, 100vh, 0) skewY(30deg);
+      transform: translate3d(0, 100vh, 0) skewY(30deg);
+      opacity: 0;
+   }
+}
+
+@keyframes wave_out_down {
+   from {
+      opacity: 1;
+   }
+
+   to {
+      -webkit-transform: translate3d(0, 100vh, 0) skewY(30deg);
+      transform: translate3d(0, 100vh, 0) skewY(30deg);
+      opacity: 0;
+   }
+}
