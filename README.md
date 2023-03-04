@@ -3,6 +3,10 @@
 Customizable react modal with multiple animations.
 &nbsp;
 
+## Demo
+
+<https://react-animation-modal.netlify.app/>
+
 ## Installation
 
 To install, you can use [npm](https://www.npmjs.com/ "npm") or [yarn](https://classic.yarnpkg.com/lang/en/ "yarn"):
