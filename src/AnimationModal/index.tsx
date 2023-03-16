@@ -77,7 +77,7 @@ export const AnimationModal = ({
             classNames={animation}
          >
             <div style={{ ...(isSizeValue ? { width: size } : {}) }} className={`modal-body ${!isSizeValue ? size : ''} ${contentClassName}`}>
-               <div className={`icon ${closeClassName}`} onClick={() => setShowContent(false)} >
+               <div className={`icon-wrapper ${closeClassName}`} onClick={() => setShowContent(false)}>
                   {closeIcon || <CloseSvg />}
                </div>
                {size === 'fullScreen' ?
