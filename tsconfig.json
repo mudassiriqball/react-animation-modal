@@ -10,6 +10,7 @@
       "importHelpers": false,
       "declaration": true,
       "sourceMap": true,
+      "sourceRoot": "/dist",
       "rootDir": "./src",
       "outDir": "./dist/esm",
       "strict": true,
